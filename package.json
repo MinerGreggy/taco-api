@@ -1,0 +1,27 @@
+{
+    "name": "taco-api",
+    "version": "2.2.5",
+    "repository": "https://github.com/MinerGreggy/taco-api.git",
+    "bugs": "https://github.com/MinerGreggy/taco-api/issues",
+    "license": "GPL-3.0",
+    "dependencies": {
+        "json-bigint": "^1.0.0",
+        "ws": "^7.5.0"
+    },
+    "main": "index.js",
+    "engines": {
+        "node": ">=12.0.0"
+    },
+    "description": "taco-Api",
+    "homepage": "https://github.com/MinerGreggy/taco-api#readme",
+    "directories": {
+        "lib": "lib"
+    },
+    "keywords": [
+        "taco",
+        "blockchain",
+        "chiadashboard",
+        "tacodashboard"
+    ],
+    "author": "MinerGreggy"
+}

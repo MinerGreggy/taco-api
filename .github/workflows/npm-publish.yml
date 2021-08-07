@@ -1,0 +1,25 @@
+
+name: npm-publish
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  release-npm:
+    runs-on: ubuntu-latest
+    if: "contains(github.event.head_commit.message, 'Release')"
+    steps:
+      - name: Checkout The Repo
+        uses: actions/checkout@v2
+      - name: Set Up Node.js 12.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 12.x
+          registry-url: 'https://registry.npmjs.org'
+      - name: Publish To NPM
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm publish --access public
+        
+        
